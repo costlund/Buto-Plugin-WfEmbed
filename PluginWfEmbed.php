@@ -1,24 +1,5 @@
 <?php
-/**
-<p>
-Embed content form file.
-</p>
- */
 class PluginWfEmbed{
-  /**
-  <p>
-  Embed Javascript.
-  </p>
-  #code-yml#
-  -
-    type: widget
-    data:
-      plugin: 'wf/embed'
-      method: js
-      data:
-        file: /plugin/xx/yy/js/function.js
-  #code#
-  */
   public static function widget_js($data){
     wfPlugin::includeonce('wf/array');
     $data = new PluginWfArray($data);
@@ -30,21 +11,6 @@ class PluginWfEmbed{
     }
     wfDocument::renderElement(array($element));
   }
-  /**
-  <p>
-  Embed file.
-  </p>
-  #code-yml#
-  -
-    type: widget
-    data:
-      plugin: 'wf/embed'
-      method: embed
-      data:
-        type: style
-        file: /theme/xx/yy/css/style.css
-  #code#
-  */
   public static function widget_embed($data){
     wfPlugin::includeonce('wf/array');
     $data = new PluginWfArray($data);
@@ -63,9 +29,3 @@ class PluginWfEmbed{
     wfDocument::renderElement(array($element));
   }
 }
-
-
-
-
-
-
