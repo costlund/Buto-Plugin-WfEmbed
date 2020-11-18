@@ -1,17 +1,17 @@
-version: '1.1.0'
+version: 1.1.0
 history:
-  '1.1.0':
+  1.1.0:
     date: '2020-05-17'
-    title: Multiple files
+    title: 'Multiple files'
     description: 'Embed multiple files.'
-  '1.0.0':
+  1.0.0:
     date: '2019-01-09'
-    title: First version
+    title: 'First version'
     description: 'First version.'
 plugin:
   -
     name: wf/array
-    version: 1.0.1
+    version: 1.2.0
 sys:
   -
     name: mercury
