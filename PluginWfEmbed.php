@@ -36,7 +36,7 @@ class PluginWfEmbed{
     foreach ($files as $key => $value) {
       $value = wfSettings::replaceTheme($value);
       if($value && wfFilesystem::fileExist(wfGlobals::getAppDir().$value)){
-        $element[] = wfDocument::createHtmlElement($data->get('data/type'), file_get_contents(wfGlobals::getAppDir().$value));
+        $element[] = wfDocument::createHtmlElement($data->get('data/type'), file_get_contents(wfGlobals::getAppDir().$value), $data->get('data/attribute'));
       }else{
         exit("PluginWfEmbed says: File $value does not exist!");
       }

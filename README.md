@@ -1,30 +1,40 @@
 # Buto-Plugin-WfEmbed
 Embed file content.
 
-## Embed one
-Embed one file.
+
+## Widget
 ```
 type: widget
 data:
   plugin: 'wf/embed'
   method: embed
   data:
+```
+
+### Type
+```
     type: script
+```
+
+### One file
+Embed one file.
+```
     file: /plugin/xx/yy/js/PluginXxYy.js
 ```
 
-## Multiple files
+### Multiple files
 Embed multiple files.
 ```
-type: widget
-data:
-  plugin: 'wf/embed'
-  method: embed
-  data:
-    type: script
     file: 
       - /plugin/xx/yy/js/PluginXxYy1.js
       - /plugin/xx/yy/js/PluginXxYy2.js
+```
+
+### Attribute
+Add attribute to element.
+```
+    attribute:
+      type: "text/babel"
 ```
 
 ## Widget example
