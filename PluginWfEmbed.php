@@ -43,4 +43,14 @@ class PluginWfEmbed{
     }
     wfDocument::renderElement($element);
   }
+  /**
+   * Get widget for embedding plugin js file located in /js/PluginXxxYyy.js.
+   * @param string $class
+   * @return array
+   */
+  public static function getWidgetEmbedJs($class){
+    $file = '/plugin/'.wfGlobals::get('widget/data/plugin').'/js/'.$class.'.js';
+    $widget = wfDocument::createWidget('wf/embed', 'embed', array('type' => 'script', 'file' => $file));
+    return $widget;
+  }
 }
